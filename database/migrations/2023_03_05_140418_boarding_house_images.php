@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('broading_house_images', function (Blueprint $table) {
+        Schema::create('boarding_house_images', function (Blueprint $table) {
             $table->id();
-            $table->src('photo');
-            $table->unsignedBigInteger('broading_house_id')->nullable();
-            $table->foreign('broading_house_id')
-                ->references('id')->on('broading_houses')
+            $table->string('photo');
+            $table->unsignedBigInteger('boarding_house_id')->nullable();
+            $table->foreign('boarding_house_id')
+                ->references('id')->on('boarding_houses')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            
+
             $table->timestamps();
         });
     }

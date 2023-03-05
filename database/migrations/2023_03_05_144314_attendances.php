@@ -15,17 +15,17 @@ return new class extends Migration
             $table->id();
 
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->unsignedBigInteger('broading_room')->nullable();
+            $table->unsignedBigInteger('boarding_room')->nullable();
             $table->string('status');
-            
+
             $table->timestamps();
 
             $table->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->foreign('broading_room')
-                ->references('id')->on('broading_rooms')
+            $table->foreign('boarding_room')
+                ->references('id')->on('boarding_rooms')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
