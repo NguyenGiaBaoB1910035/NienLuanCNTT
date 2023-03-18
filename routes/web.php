@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin/index');
+    return view('admin/athu/forgot_password');
 });
 
-Route::get('/aaaa', function(){
-    return view('admin.layouts.dashboad');
-});
+
+
+
