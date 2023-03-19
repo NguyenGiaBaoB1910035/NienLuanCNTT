@@ -66,7 +66,18 @@
 
   <body>
     <!-- Content -->
-
+    @if (\Session::has('success'))
+    <div class="alert alert-success alert-dismissible fade show d-flex justify-content-center" role="alert">
+        {!! \Session::get('success') !!}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+@if (\Session::has('error'))
+    <div class="alert alert-danger alert-dismissible fade show d-flex justify-content-center" role="alert">
+        {!! \Session::get('error') !!}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
     <div class="container-xxl">
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
@@ -138,15 +149,16 @@
               <h4 class="mb-2">Welcome to Sneat! 👋</h4>
               <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-              <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+              <form id="formAuthentication" class="mb-3" action="{{ route('admin.login.submit') }}" method="POST">
+                @csrf
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email or Username</label>
+                  <label for="email" class="form-label">Email or SDT</label>
                   <input
                     type="text"
                     class="form-control"
                     id="email"
-                    name="email-username"
-                    placeholder="Enter your email or username"
+                    name="username"
+                    placeholder="Enter your email or SDT"
                     autofocus
                   />
                 </div>
