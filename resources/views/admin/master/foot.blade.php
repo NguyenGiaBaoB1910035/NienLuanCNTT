@@ -1,6 +1,6 @@
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
-<script src="{{ asset('admin_template/assets/vendor/libs/jquery/jquery.js') }}"></script>
+{{--<script src="{{ asset('admin_template/assets/vendor/libs/jquery/jquery.js') }}"></script>--}}
 <script src="{{ asset('admin_template/assets/vendor/libs/popper/popper.js') }}"></script>
 <script src="{{ asset('admin_template/assets/vendor/js/bootstrap.js') }}"></script>
 <script src="{{ asset('admin_template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
@@ -16,6 +16,8 @@
 
 <!-- Page JS -->
 <script src="{{ asset('admin_template/assets/js/dashboards-analytics.js') }}"></script>
+
+<!--Datatable-->
 
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>

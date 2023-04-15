@@ -55,7 +55,7 @@ class AdminController extends Controller
     }
 
     public function registerSubmit(Request $request) {
-        $checkTK = BD::table('users')
+        $checkTK = DB::table('users')
             ->where('phone', $request->phone)
             ->orWhere('email', $request->email)
             ->get();
@@ -70,9 +70,9 @@ class AdminController extends Controller
 
         $createTK = User::crate([
             'name' => $request->name,
-            'email' => $requests->email,
-            'phone' => $requests->phone,
-            'password' => bcrypt($requests->password),
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'password' => bcrypt($request->password),
         ]);
 
         if($createTK) {

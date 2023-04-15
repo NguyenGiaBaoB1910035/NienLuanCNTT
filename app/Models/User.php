@@ -45,6 +45,12 @@ class User extends Authenticatable
         'deleted_at',
     ];
 
+    public function boardingHouse()
+    {
+//        return $this->belongsTo(BoardingHouse::class,'user_id');
+        return $this->hasOne(BoardingHouse::class,'user_id','id');
+    }
+
     /**
      * The attributes that should be cast.
      *
@@ -54,5 +60,5 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    
+
 }
