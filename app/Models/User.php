@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -29,7 +29,7 @@ class User extends Authenticatable
         'password',
         'facebook_id',
         'google_id',
-        'email_verified_at',
+        'email_verified_at'
     ];
 
     /**
@@ -39,17 +39,8 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
-        'created_at',
-        'updated_at',
-        'deleted_at',
+        'remember_token'
     ];
-
-    public function boardingHouse()
-    {
-//        return $this->belongsTo(BoardingHouse::class,'user_id');
-        return $this->hasOne(BoardingHouse::class,'user_id','id');
-    }
 
     /**
      * The attributes that should be cast.
@@ -60,5 +51,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
+    public function is_post_favorite($post_id)
+    {
+        if (
+            PostFavorite::where('post_id', $post_id)->where('user_id', $this->id)->exists()
+            && PostFavorite::where('post_id', $post_id)->where('user_id', $this->id)->first()->status == 1
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

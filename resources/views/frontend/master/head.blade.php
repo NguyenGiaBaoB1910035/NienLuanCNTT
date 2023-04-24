@@ -1,31 +1,37 @@
 <meta charset="utf-8">
-<title>Hotelier - Hotel HTML Template</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta content="" name="keywords">
-<meta content="" name="description">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Job Board</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 
-<!-- Favicon -->
-<link href="{{ asset('frontend_template/img/favicon.ico') }}" rel="icon">
+<!-- <link rel="manifest" href="site.webmanifest"> -->
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('logo-flower.ico') }}">
+<!-- Place favicon.ico in the root directory -->
 
-<!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- CSS here -->
+<link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/themify-icons.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/nice-select.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/flaticon.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/gijgo.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/slicknav.css') }}">
 
-<!-- Icon Font Stylesheet -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+{{-- <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}"> --}}
 
-<!-- Libraries Stylesheet -->
-<link href="{{ asset('frontend_template/lib/animate/animate.min.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend_template/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend_template/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+{{-- Font Awesome --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css">
 
-<!-- Customized Bootstrap Stylesheet -->
-<link href="{{ asset('frontend_template/css/bootstrap.min.css') }}" rel="stylesheet">
+{{-- customize-style.css --}}
+<link rel="stylesheet" href="{{ asset('frontend/css/customize-style.css') }}">
 
-<!-- Template Stylesheet -->
-<link href="{{ asset('frontend_template/css/style.css') }}" rel="stylesheet">
-<link href="{{ asset('frontend_template/css/custom.css') }}" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

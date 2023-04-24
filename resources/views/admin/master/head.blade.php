@@ -2,12 +2,10 @@
 <meta name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-<title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+<title>@yield('title', __('message.title_site'))</title>
 
 <meta name="description" content="" />
 
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="{{ asset('admin_template/assets/img/favicon/favicon.ico') }}" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,6 +16,11 @@
 
 <!-- Icons. Uncomment required icon fonts -->
 <link rel="stylesheet" href="{{ asset('admin_template/assets/vendor/fonts/boxicons.css') }}" />
+
+{{-- Font Awesome --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- Core CSS -->
 <link rel="stylesheet" href="{{ asset('admin_template/assets/vendor/css/core.css') }}"
@@ -33,15 +36,6 @@
 <link rel="stylesheet" href="{{ asset('admin_template/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
 
 <!-- Page CSS -->
-<!-- MDB -->
-<script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
-></script>
-<!-- Datatables -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 
 <!-- Helpers -->
 <script src="{{ asset('admin_template/assets/vendor/js/helpers.js') }}"></script>
@@ -50,3 +44,13 @@
 <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
 <script src="{{ asset('admin_template/assets/js/config.js') }}"></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css">
+
+{{-- Data Table --}}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+{{-- jQuery --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
